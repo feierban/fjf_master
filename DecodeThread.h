@@ -1,7 +1,7 @@
 #pragma once
 #include <qthread.h>
 #include <QtNetwork\qudpsocket.h>
-#include <nalu.h>
+#include <naluprocess.h>
 #include <qimage.h>
 
 class DecodeThread :
@@ -22,11 +22,12 @@ public:
 signals:
 	void Sig_Sendimg(QImage);
 	void Sig_SendFeiKongData(QByteArray);
+    void Sig_SendH264Data(QByteArray);
 
 private slots:
 	void Slt_onImageGet(QImage);
 	void Slt_getVideoStream();
-	void Slt_onFeiKongDataGet(QByteArray);
+    void Slt_onOneNaluGet(Nalu);
 
 private:
 	bool m_decode;
@@ -35,7 +36,7 @@ private:
 	quint64 m_port;
 	QUdpSocket *m_socket;
 
-	nalu *m_nalu;
+    NaluProcess *m_naluproc;
 	QThread *m_thread;
 };
 

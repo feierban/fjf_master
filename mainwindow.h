@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <feimaplayer.h>
+#include <Feimaplayer.h>
 #include <qlabel.h>
 #include <DecodeThread.h>
 #include <SerialProg.h>

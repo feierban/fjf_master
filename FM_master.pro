@@ -42,18 +42,18 @@ INCLUDEPATH +=  $$MAVLINK_INC_DIR \
 SOURCES +=  main.cpp\
             mainwindow.cpp\
             DecodeThread.cpp\
-            feimaplayer.cpp\
-            nalu.cpp\
             SerialProg.cpp\
-            UasProvideProcess.cpp
+            UasProvideProcess.cpp \
+            naluprocess.cpp \
+    Feimaplayer.cpp
 
 
 HEADERS  += mainwindow.h\
             DecodeThread.h\
-            feimaplayer.h\
-            nalu.h\
             SerialProg.h\
-            UasProvideProcess.h
+            UasProvideProcess.h \
+            naluprocess.h \
+    Feimaplayer.h
 
 FORMS    += mainwindow.ui
 
@@ -61,7 +61,8 @@ LIBS += -L$$FFMPEG_LIB_DIR/ \
         -lavcodec   \
         -lavformat  \
         -lavutil    \
-        -lswscale
+        -lswscale   \
+
 
 LIBS += -L$$FMMANAGER_LIB_DIR/ \
         -lFmLinkInstance

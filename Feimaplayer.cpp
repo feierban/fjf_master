@@ -1,4 +1,4 @@
-#include "feimaplayer.h"
+#include "Feimaplayer.h"
 #include <iostream>
 #include "qdebug.h"
 
@@ -93,21 +93,21 @@ void feimaplayer::ThreadMain()
 	}
 
 	pthread = new QThread();
-	m_nalu = new nalu();
-	m_nalu->moveToThread(pthread);
-	connect(pthread, &QThread::started, m_nalu, &nalu::DecodeThreadMain);
-	connect(m_nalu, &nalu::sig_GetOneFrame, this, &feimaplayer::slt_onimageget, Qt::QueuedConnection);
+    m_naluproc = new NaluProcess();
+    m_naluproc->moveToThread(pthread);
+    connect(pthread, &QThread::started, m_naluproc, &NaluProcess::DecodeThreadMain);
+    connect(m_naluproc, &NaluProcess::sig_GetOneFrame, this, &feimaplayer::slt_onimageget, Qt::QueuedConnection);
 
-	m_nalu->InitDecoder();
+    m_naluproc->InitDecoder();
 	pthread->start();
 	while (!feof(file)) {
 		memset(data_buffer, 0, max_buffer);
 		size_t start_pos = 0;
 		size_t size = fread(data_buffer, 1, max_buffer, file);
-		m_nalu->appendData(data_buffer, size);
+        m_naluproc->appendData(data_buffer, size);
 		QThread::msleep(50);
 	}
-	m_nalu->flush();
+    m_naluproc->flush();
 	fclose(file);
 }
 

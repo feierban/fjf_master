@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     //ui->Input_File->setText("E:/resource/VADemo.h264");
-	ui->Input_ip->setText("192.168.1.2");
+    ui->Input_ip->setText("192.168.2.100");
 	ui->Input_port->setText("19502");
 
     player = new feimaplayer();

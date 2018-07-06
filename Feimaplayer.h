@@ -1,6 +1,6 @@
 #pragma once
 #include <QObject>
-#include "nalu.h"
+#include "naluprocess.h"
 #include <QImage>
 #include <qthread.h>
 
@@ -27,7 +27,7 @@ private:
 	bool resetcalloc();
 	int max_buffer;
 	char *data_buffer;
-	nalu *m_nalu;
+    NaluProcess *m_naluproc;
 	QString filename;
 	QThread *pthread;
 };

@@ -1,35 +1,135 @@
-#include "nalu.h"
+#include "naluprocess.h"
 #include <iostream>
 #include <QDebug>
 #include <qthread.h>
 #include <qfile.h>
+#include <QMetaType>
 
 static bool isstartcode(const char* buffer)
 {
-	if (buffer[0] == 0 && buffer[1] == 0 && buffer[2] == 0 && buffer[3] == 1) {
-		return true;
-	}
-	return false;
+    if (buffer[0] == 0 && buffer[1] == 0 && buffer[2] == 0 && buffer[3] == 1) {
+        return true;
+    }
+    return false;
 }
 
-nalu::nalu()
+Nalu::Nalu()
 {
-	startcodeprefix_len = 4;
-	forbidden_bit = 0;
-	nal_reference_idc = NALU_PRIORITY_DISPOSABLE;
+    init();
+}
 
+QByteArray &Nalu::append(QByteArray data)
+{
+    m_isDecoded = false;
+    return m_naludata.append(data);
+}
+
+QByteArray &Nalu::data()
+{
+    return m_naludata;
+}
+
+QByteArray &Nalu::head()
+{
+    return m_naluhead;
+}
+
+QByteArray &Nalu::content()
+{
+    return m_nalucontent;
+}
+
+void Nalu::init()
+{
+    m_isNalu = false;
+    m_isDecoded = false;
+    m_unitType = NALU_TYPE_ILLEGAL;
+    m_unitPriority = NALU_PRIORITY_DISPOSABLE;
+    m_naludata.clear();
+    m_naluhead.clear();
+    m_nalucontent.clear();
+}
+
+void Nalu::clear()
+{
+     init();
+}
+
+bool Nalu::isNalu()
+{
+    if (!m_isDecoded) {
+        decodeunit();
+    }
+    return m_isNalu;
+}
+
+Nalu::NaluType Nalu::unitType()
+{
+    if (!m_isDecoded) {
+        decodeunit();
+    }
+    return m_unitType;
+}
+
+Nalu::NaluPriority Nalu::unitPriority()
+{
+    if (!m_isDecoded) {
+        decodeunit();
+    }
+    return m_unitPriority;
+}
+
+int Nalu::size()
+{
+    return m_naludata.size();
+}
+
+bool Nalu::decodeunit()
+{
+    if (m_naludata.size() < 4)
+        return false;
+    char *buf = m_naludata.data();
+    if (!isstartcode(buf))
+        return false;
+
+    m_isDecoded = true;
+
+    char f_c = m_naludata[4];
+    int forbidden_zero_bit = (f_c & 0x80) >> 7;
+    int nal_ref_idc = (f_c & 0x60) >> 5;
+    int nal_unit_type = (f_c & 0x1f);
+    if (forbidden_zero_bit != 0)
+        m_isNalu = false;
+    if (nal_unit_type >= NALU_TYPE_MAX)
+        m_isNalu = false;
+    m_unitType = (NaluType)nal_unit_type;
+
+    if (nal_ref_idc >= NALU_PRIORITY_MAX)
+        m_isNalu = false;
+    m_unitPriority = (NaluPriority)nal_ref_idc;
+
+    m_naluhead = m_naludata.mid(0,4);
+    m_nalucontent = m_naludata.mid(4);
+    m_isNalu = true;
+    return true;
+}
+
+NaluProcess::NaluProcess()
+{
 	codec_ = NULL;
 	pFrame_ = NULL;
 	avctx_ = NULL;
 	codecInited = false;
 	begin = 0;
+    stream_rate.den = 1;
+    stream_rate.num = 25;
 
 	decodebegin = 0;
-	m_feikong.clear();
+    m_feikong.clear();
 }
 
 
-nalu::~nalu()
+NaluProcess::~NaluProcess()
 {
     av_frame_free(&pFrame_);
 	pFrame_ = NULL;
@@ -47,7 +147,7 @@ nalu::~nalu()
 	codecInited = false;
 }
 
-bool nalu::ReInitDecoder()
+bool NaluProcess::ReInitDecoder()
 {
 	av_frame_free(&pFrame_);
 	av_packet_free(&avpkt_);
@@ -61,7 +161,7 @@ bool nalu::ReInitDecoder()
 	return true;
 }
 
-bool nalu::InitDecoder()
+bool NaluProcess::InitDecoder()
 {
     if (codecInited)
         return true;
@@ -88,14 +188,14 @@ bool nalu::InitDecoder()
     return true;
 }
 
-void nalu::appendData(const char* data, size_t len)
+void NaluProcess::appendData(const char* data, size_t len)
 {
 	mutex.lock();
 	m_data.append(data, len);
 	mutex.unlock();
 }
 
-int nalu::findstartcode(QByteArray in)
+int NaluProcess::findstartcode(QByteArray in)
 {
 	int buf_size = in.size();
 	if (buf_size < 4)
@@ -112,11 +212,11 @@ int nalu::findstartcode(QByteArray in)
 	return -1;
 }
 
-int nalu::findfeikongstartcode(QByteArray in)
+int NaluProcess::findfeikongstartcode(QByteArray in)
 {
 	int start = findstartcode(in);
 	if (start != -1) {
-		if (NALU_TYPE_FAIKONG == (in[start + 4] & 0x1f)) {
+        if (Nalu::NALU_TYPE_FEIKONG == (in[start + 4] & 0x1f)) {
 			return start;
 		}
 		else {
@@ -131,14 +231,14 @@ int nalu::findfeikongstartcode(QByteArray in)
 }
 
 
-bool nalu::DecodeNalu(QByteArray na)
+bool NaluProcess::DecodeNalu(QByteArray na)
 {
 	const uint8_t* data = NULL;
 	int buf_size = na.size();
 	data = (uint8_t*)calloc(buf_size, 1);
 	const uint8_t *p_data = data;
 	memcpy((void*)data, na.data(), buf_size);
-
+    avpkt_ = av_packet_alloc();
 	av_parser_parse2(avParserContext, avctx_, &(avpkt_->data), &(avpkt_->size), data, buf_size, 0, 0, 0);
 
 #if 0
@@ -177,7 +277,7 @@ bool nalu::DecodeNalu(QByteArray na)
 	return true;
 }
 
-bool nalu::DecodeThreadMain()
+bool NaluProcess::DecodeThreadMain()
 {
 	QByteArray receivedata;
 	bool streamstart = false;
@@ -206,6 +306,13 @@ bool nalu::DecodeThreadMain()
 			if (findpos == -1) {
 				break;
 			} else {
+                //for nalu unit send
+                {
+                    Nalu naulint;
+                    naulint.append(receivedata.mid(0, 4 + findpos));
+                    emit Sig_GetOneNalu(naulint);
+                }
+
 				m_datatodecode.append(receivedata.mid(0, 4 + findpos));
 				receivedata = receivedata.mid(4 + findpos);
 				directDecode();
@@ -215,7 +322,7 @@ bool nalu::DecodeThreadMain()
 	}
 }
 
-bool nalu::directDecode()
+bool NaluProcess::directDecode()
 {
 	if (!m_datatodecode.size())
 		return false;
@@ -226,8 +333,7 @@ bool nalu::directDecode()
 	memcpy((void*)data, m_datatodecode.data(), m_datatodecode.size());
 	int len = m_datatodecode.size();
 	while (len > 0) {
-
-		int length = av_parser_parse2(avParserContext, avctx_, &(avpkt_->data), &(avpkt_->size), data, len, 0, 0, 0);
+        int length = av_parser_parse2(avParserContext, avctx_, &(avpkt_->data), &(avpkt_->size), data, len, 0, 0, 0);
 		data += length;
 		len -= length;
 
@@ -246,13 +352,14 @@ bool nalu::directDecode()
 		}
 #else
 		if (avpkt_->size > 0) {
-			if (avcodec_send_packet(avctx_, avpkt_)) {
+            if (avcodec_send_packet(avctx_, avpkt_)) {
 				// !=0: mean send false;
 				// todo
 			} else {
 				// 0: mead send succ;
 				// todo
-			}
+                Rtmp_Init();
+                Rtmp_Write();            }
 		} else {
 			qDebug() << "error" << " pkt";
 		}
@@ -268,7 +375,7 @@ bool nalu::directDecode()
     return true;
 }
 
-bool nalu::flush()
+bool NaluProcess::flush()
 {
 	while (true) {
 		AVPacket *tmp_avpkt_ = NULL;
@@ -284,7 +391,7 @@ bool nalu::flush()
 	return true;
 }
 
-bool nalu::saveTorgb24(AVCodecContext *avcc, AVFrame *avf)
+bool NaluProcess::saveTorgb24(AVCodecContext *avcc, AVFrame *avf)
 {
     qDebug() << "width:" << avcc->width << " height:" << avcc->height;
 
@@ -304,4 +411,70 @@ bool nalu::saveTorgb24(AVCodecContext *avcc, AVFrame *avf)
     av_free(rgbBuffer);
 	return true;
 }
+
+/////////////////////////////////////////////////////////////////////////////////////
+void NaluProcess::Rtmp_Init()
+{
+    if (inited)
+        return;
+    //QString outurl = "rtmp://111.231.56.227:1935/live/123";
+    QString outurl = "2.mp4";
+    //avformat_alloc_output_context2( &p_ofmt_ctx, NULL, "flv", outurl.toLatin1().data() );
+    avformat_alloc_output_context2( &p_ofmt_ctx, NULL, "mp4", outurl.toLatin1().data() );
+    AVStream *out_stream = avformat_new_stream( p_ofmt_ctx, NULL );
+    {
+        AVCodecContext *c;
+        c = out_stream->codec;
+        c->bit_rate = 400000;
+        c->codec_id = AV_CODEC_ID_H264;
+        c->codec_type = AVMEDIA_TYPE_VIDEO;
+        c->time_base.num = 1000000;
+        c->time_base.den = 1;
+        c->width = 1920;
+        c->height = 1080;
+        //c->pix_fmt = AV_PIX_FMT_YUVJ420P;
+        c->max_qdiff = 3;
+        c->qmax = 31;
+        c->qmin = 2;
+        c->qcompress = 0.5;
+
+    }
+    {
+        //avcodec_copy_context(out_stream->codec, avctx_);
+    }
+
+    int n_ret = avio_open( &p_ofmt_ctx->pb, outurl.toLatin1().data(), AVIO_FLAG_WRITE );
+    n_ret = avformat_write_header( p_ofmt_ctx, NULL );
+    if (n_ret)
+        inited = true;
+}
+
+void NaluProcess::Rtmp_Write()
+{
+    static int a = 0;
+    AVPacket *pket = av_packet_alloc();
+    av_copy_packet(pket, avpkt_);
+    pket->flags |= AV_PKT_FLAG_KEY;
+
+    if( pket->pts == AV_NOPTS_VALUE ) {
+        AVRational time_base1 = p_ofmt_ctx->streams[0]->time_base;
+        int64_t n_calc_duration = ( double )AV_TIME_BASE/av_q2d(stream_rate);
+        pket->pts = ( double )( p_ofmt_ctx->streams[0]->nb_frames  * n_calc_duration )/( double )( av_q2d(time_base1)*AV_TIME_BASE );
+        pket->dts = pket->pts;
+        pket->duration = ( double )n_calc_duration/( double )( av_q2d( time_base1 )*AV_TIME_BASE );
+    }
+
+    int n_ret = 0;
+    n_ret = av_write_frame( p_ofmt_ctx, pket );
+    qDebug() << "fjf_dug ------------ log" << n_ret;
+    if (a++ > 300) {
+        a = 0;
+        av_write_trailer(p_ofmt_ctx);
+        avio_close(p_ofmt_ctx->pb);
+        p_ofmt_ctx->pb = NULL;
+        av_free(p_ofmt_ctx);
+        inited = false;
+    }
+}
+
 
