@@ -84,7 +84,7 @@
       </Creatives> 
     </InLine> 
   </Ad> 
-  <Ad id="4" sequence="3" > 
+  <Ad id="4" sequence="4" > 
     <InLine> 
       <AdSystem>MetaX</AdSystem>  
       <AdTitle>MetaX T2</AdTitle>  
@@ -93,7 +93,7 @@
 <Pricing model="CPM" currency="USD">500</Pricing>  
       <Impression> <![CDATA[http://rtb-uat.ssp.metaxads.com/stat/pv?ei=AAABf6sKg6ASLE2-IdNdh2X9vcD7zZAj324ORHI9xcZfAbunnM7E6jy5QQxxfFY-U2jfaJw60vfLANELw7C8d195pkoCn0Wm7w_v5pQSvK7s9kaSlphtfsQBMwnNcW95OOIVYAas-13JZ0JGvEMWfTwljrmLA0nBLlvfynY3LTQaXq55epzIOmAaLm_Dj0UoUEgB2W9CuRpFCbLlF-TZI6otw_YeIL674vzbRsmk7AE]]> </Impression>  
       <Creatives> 
-        <Creative id="2" sequence="3"> 
+        <Creative id="2" sequence="4"> 
           <Linear> 
             <Duration>00:00:15</Duration>  
             <TrackingEvents> 
