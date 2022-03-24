@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">  
+  <Ad id="2" sequence="1" > 
+    <InLine> 
+      <AdSystem>MetaX</AdSystem>  
+      <AdTitle>MetaX T2</AdTitle>  
+      <Description> <![CDATA[MetaX T2]]> </Description>  
+      <Error> <![CDATA[http://rtb-uat.ssp.metaxads.com/stat/pv?ei=AAABf6sIjfhY6IVYMiYVnfGpboQjb2slQe8r37xEUWQ4oPww179cO-e64MCg2i4_cfEephORtiM0p7caolcz0NeA5EvRoh0pCkhwZlM74gZ5kvIwMFQcN0ao820xoe67-liQyJYAIT5rjm4sbJVJV8-yZDAS0YNQgYgs9PuFUZBvEdi2zjPnd4STEI2GWrDcGMgKmmeQcHvJd5CHov3OuzwuKKz1q5vDDVOQj2m97Uc&verr=[ERRORCODE]]]> </Error>
+<Pricing model="CPM" currency="USD">500</Pricing>  
+      <Impression> <![CDATA[http://rtb-uat.ssp.metaxads.com/stat/pv?ei=AAABf6sIjfhY6IVYMiYVnfGpboQjb2slQe8r37xEUWQ4oPww179cO-e64MCg2i4_cfEephORtiM0p7caolcz0NeA5EvRoh0pCkhwZlM74gZ5kvIwMFQcN0ao820xoe67-liQyJYAIT5rjm4sbJVJV8-yZDAS0YNQgYgs9PuFUZBvEdi2zjPnd4STEI2GWrDcGMgKmmeQcHvJd5CHov3OuzwuKKz1q5vDDVOQj2m97Uc]]> </Impression>  
+      <Creatives> 
+        <Creative id="2" sequence="1"> 
+          <Linear> 
+            <Duration>00:00:15</Duration>  
+            <TrackingEvents> 
+              <Tracking event="start"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=start]]> </Tracking>  
+              <Tracking event="firstQuartile"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=firstQuartile]]> </Tracking>  
+              <Tracking event="midpoint"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=midpoint]]> </Tracking>  
+              <Tracking event="thirdQuartile"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=thirdQuartile]]> </Tracking>  
+              <Tracking event="complete"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=complete]]> </Tracking>  
+              <Tracking event="mute"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=mute]]> </Tracking>  
+              <Tracking event="unmute"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=unmute]]> </Tracking>  
+              <Tracking event="rewind"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=rewind]]> </Tracking>  
+              <Tracking event="pause"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=pause]]> </Tracking>  
+              <Tracking event="resume"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=resume]]> </Tracking>  
+              <Tracking event="creativeView"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=creativeView]]> </Tracking>  
+              <Tracking event="fullscreen"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=fullscreen]]> </Tracking>  
+              <Tracking event="acceptInvitationLinear"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=acceptInvitationLinear]]> </Tracking>  
+              <Tracking event="closeLinear"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=closeLinear]]> </Tracking>  
+              <Tracking event="exitFullscreen"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=exitFullscreen]]> </Tracking> 
+              <Tracking event="skip"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=skip]]> </Tracking> 
+            </TrackingEvents>  
+            <VideoClicks> 
+              <ClickThrough id="MetaX"><![CDATA[https://www.baidu.com]]></ClickThrough>
+              <ClickTracking><![CDATA[http://rtb-as.ssp.srafcloud.com/stat/click?ei=AAABdKDXUo0hE7zo4uJOgeASCktf-R-4nlp-iBIqTIqWbcCKVUKHA5bgRWX86HGXJ9vEpt1_GLsjgc32wbNqiXXCMCzefjsurX6PRIM8RmJuQ2M1eoEKvDk3FKa7qAjBD2GuInXxmSfqc2pHeZeL7--m7nw9TIM0cIKN50aUnfg-YlxkzzZdkhujfwMsegqgwLPoBH04Yx8Q4UUYczJrfl1nGtmPWZOpnCAGJZkNSviFLPAT1DhW-yOgg6Ypg1kaycLBkZKq1RUB]]></ClickTracking>
+            </VideoClicks>  
+            <MediaFiles> 
+              <MediaFile id="MetaX" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2443" scalable="true" maintainAspectRatio="true"> <![CDATA[http://cdn.srafcloud.com/staging/video/54142abe1e114c87907041cc36a57a03.mp4]]> </MediaFile> 
+            </MediaFiles> 
+          </Linear> 
+        </Creative> 
+      </Creatives> 
+    </InLine> 
+  </Ad>
+ <Ad id="3" sequence="2" > 
+    <InLine> 
+      <AdSystem>MetaX</AdSystem>  
+      <AdTitle>MetaX T2</AdTitle>  
+      <Description> <![CDATA[MetaX T2]]> </Description>  
+      <Error> <![CDATA[http://rtb-uat.ssp.metaxads.com/stat/pv?ei=AAABf6sKG3RnySHmGT5qfex8ZL-hmkkt92dLm3xYnVzMXxQzfBsE_I2Yh-3K0PUh9GI63wggE4uRUsq4JdHxPuWNumxpuXaT_VvYUQfA1MIIj0_KvsdKUMQN9XQ_x8pP1IFqBwy9puF8oIKT4ALP_ti7hQ8gofrNSmLp3cRqp-yoqV2fV3Q4EWu09DoRkv8iNnRoWCN9leXiHq-288PjyIjcFzu8ncbUWGDhLwGQRB8&verr=[ERRORCODE]]]> </Error>
+<Pricing model="CPM" currency="USD">500</Pricing>  
+      <Impression> <![CDATA[http://rtb-uat.ssp.metaxads.com/stat/pv?ei=AAABf6sKG3RnySHmGT5qfex8ZL-hmkkt92dLm3xYnVzMXxQzfBsE_I2Yh-3K0PUh9GI63wggE4uRUsq4JdHxPuWNumxpuXaT_VvYUQfA1MIIj0_KvsdKUMQN9XQ_x8pP1IFqBwy9puF8oIKT4ALP_ti7hQ8gofrNSmLp3cRqp-yoqV2fV3Q4EWu09DoRkv8iNnRoWCN9leXiHq-288PjyIjcFzu8ncbUWGDhLwGQRB8]]> </Impression>  
+      <Creatives> 
+        <Creative id="2" sequence="2"> 
+          <Linear> 
+            <Duration>00:00:15</Duration>  
+            <TrackingEvents> 
+              <Tracking event="start"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=start]]> </Tracking>  
+              <Tracking event="firstQuartile"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=firstQuartile]]> </Tracking>  
+              <Tracking event="midpoint"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=midpoint]]> </Tracking>  
+              <Tracking event="thirdQuartile"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=thirdQuartile]]> </Tracking>  
+              <Tracking event="complete"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=complete]]> </Tracking>  
+              <Tracking event="mute"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=mute]]> </Tracking>  
+              <Tracking event="unmute"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=unmute]]> </Tracking>  
+              <Tracking event="rewind"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=rewind]]> </Tracking>  
+              <Tracking event="pause"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=pause]]> </Tracking>  
+              <Tracking event="resume"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=resume]]> </Tracking>  
+              <Tracking event="creativeView"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=creativeView]]> </Tracking>  
+              <Tracking event="fullscreen"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=fullscreen]]> </Tracking>  
+              <Tracking event="acceptInvitationLinear"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=acceptInvitationLinear]]> </Tracking>  
+              <Tracking event="closeLinear"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=closeLinear]]> </Tracking>  
+              <Tracking event="exitFullscreen"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=exitFullscreen]]> </Tracking> 
+              <Tracking event="skip"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=skip]]> </Tracking> 
+            </TrackingEvents>  
+            <VideoClicks> 
+              <ClickThrough id="MetaX"><![CDATA[https://www.baidu.com]]></ClickThrough>
+              <ClickTracking><![CDATA[http://rtb-as.ssp.srafcloud.com/stat/click?ei=AAABdKDXUo0hE7zo4uJOgeASCktf-R-4nlp-iBIqTIqWbcCKVUKHA5bgRWX86HGXJ9vEpt1_GLsjgc32wbNqiXXCMCzefjsurX6PRIM8RmJuQ2M1eoEKvDk3FKa7qAjBD2GuInXxmSfqc2pHeZeL7--m7nw9TIM0cIKN50aUnfg-YlxkzzZdkhujfwMsegqgwLPoBH04Yx8Q4UUYczJrfl1nGtmPWZOpnCAGJZkNSviFLPAT1DhW-yOgg6Ypg1kaycLBkZKq1RUB]]></ClickTracking>
+            </VideoClicks>  
+            <MediaFiles> 
+              <MediaFile id="MetaX" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2443" scalable="true" maintainAspectRatio="true"> <![CDATA[http://cdn.srafcloud.com/staging/video/54142abe1e114c87907041cc36a57a03.mp4]]> </MediaFile> 
+            </MediaFiles> 
+          </Linear> 
+        </Creative> 
+      </Creatives> 
+    </InLine> 
+  </Ad> 
+  <Ad id="4" sequence="3" > 
+    <InLine> 
+      <AdSystem>MetaX</AdSystem>  
+      <AdTitle>MetaX T2</AdTitle>  
+      <Description> <![CDATA[MetaX T2]]> </Description>  
+      <Error> <![CDATA[http://rtb-uat.ssp.metaxads.com/stat/pv?ei=AAABf6sKg6ASLE2-IdNdh2X9vcD7zZAj324ORHI9xcZfAbunnM7E6jy5QQxxfFY-U2jfaJw60vfLANELw7C8d195pkoCn0Wm7w_v5pQSvK7s9kaSlphtfsQBMwnNcW95OOIVYAas-13JZ0JGvEMWfTwljrmLA0nBLlvfynY3LTQaXq55epzIOmAaLm_Dj0UoUEgB2W9CuRpFCbLlF-TZI6otw_YeIL674vzbRsmk7AE&verr=[ERRORCODE]]]> </Error>
+<Pricing model="CPM" currency="USD">500</Pricing>  
+      <Impression> <![CDATA[http://rtb-uat.ssp.metaxads.com/stat/pv?ei=AAABf6sKg6ASLE2-IdNdh2X9vcD7zZAj324ORHI9xcZfAbunnM7E6jy5QQxxfFY-U2jfaJw60vfLANELw7C8d195pkoCn0Wm7w_v5pQSvK7s9kaSlphtfsQBMwnNcW95OOIVYAas-13JZ0JGvEMWfTwljrmLA0nBLlvfynY3LTQaXq55epzIOmAaLm_Dj0UoUEgB2W9CuRpFCbLlF-TZI6otw_YeIL674vzbRsmk7AE]]> </Impression>  
+      <Creatives> 
+        <Creative id="2" sequence="3"> 
+          <Linear> 
+            <Duration>00:00:15</Duration>  
+            <TrackingEvents> 
+              <Tracking event="start"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=start]]> </Tracking>  
+              <Tracking event="firstQuartile"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=firstQuartile]]> </Tracking>  
+              <Tracking event="midpoint"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=midpoint]]> </Tracking>  
+              <Tracking event="thirdQuartile"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=thirdQuartile]]> </Tracking>  
+              <Tracking event="complete"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=complete]]> </Tracking>  
+              <Tracking event="mute"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=mute]]> </Tracking>  
+              <Tracking event="unmute"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=unmute]]> </Tracking>  
+              <Tracking event="rewind"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=rewind]]> </Tracking>  
+              <Tracking event="pause"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=pause]]> </Tracking>  
+              <Tracking event="resume"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=resume]]> </Tracking>  
+              <Tracking event="creativeView"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=creativeView]]> </Tracking>  
+              <Tracking event="fullscreen"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=fullscreen]]> </Tracking>  
+              <Tracking event="acceptInvitationLinear"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=acceptInvitationLinear]]> </Tracking>  
+              <Tracking event="closeLinear"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=closeLinear]]> </Tracking>  
+              <Tracking event="exitFullscreen"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=exitFullscreen]]> </Tracking> 
+              <Tracking event="skip"> <![CDATA[http://rtb-as.ssp.srafcloud.com/stat/vast?ei=AAABdKDXUo0tJ5JM7UqGfNWPqhe9b_azBONk7pVLb4sI0A4FSmfRzpGDcXnAXXF_VMzqTJIP9fwNjF5EkSr-8ZwxGf9-JcefSytGndKbZfe3Gik3G8MCVddRCF6goG-wCQ1TNrFQe8G43xJBDwYJRb2kgdXRwxJnfKuKJNsYUUnm73h9TsHLx3RYdS8SmucEGqZzHjpTRnf36jYx5HvGuY5Gu-D3F0ADcHMql51YGjXtr0uUEC-m5BWUwd0N2Le07g6JFE6PQVFr&vtype=skip]]> </Tracking> 
+            </TrackingEvents>  
+            <VideoClicks> 
+              <ClickThrough id="MetaX"><![CDATA[https://www.baidu.com]]></ClickThrough>
+              <ClickTracking><![CDATA[http://rtb-as.ssp.srafcloud.com/stat/click?ei=AAABdKDXUo0hE7zo4uJOgeASCktf-R-4nlp-iBIqTIqWbcCKVUKHA5bgRWX86HGXJ9vEpt1_GLsjgc32wbNqiXXCMCzefjsurX6PRIM8RmJuQ2M1eoEKvDk3FKa7qAjBD2GuInXxmSfqc2pHeZeL7--m7nw9TIM0cIKN50aUnfg-YlxkzzZdkhujfwMsegqgwLPoBH04Yx8Q4UUYczJrfl1nGtmPWZOpnCAGJZkNSviFLPAT1DhW-yOgg6Ypg1kaycLBkZKq1RUB]]></ClickTracking>
+            </VideoClicks>  
+            <MediaFiles> 
+              <MediaFile id="MetaX" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="2443" scalable="true" maintainAspectRatio="true"> <![CDATA[http://cdn.srafcloud.com/staging/video/54142abe1e114c87907041cc36a57a03.mp4]]> </MediaFile> 
+            </MediaFiles> 
+          </Linear> 
+        </Creative> 
+      </Creatives> 
+    </InLine> 
+  </Ad> 
+</VAST>
